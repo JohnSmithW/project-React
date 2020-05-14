@@ -1,4 +1,5 @@
 const path = require('path');
+var merge = require('webpack-merge');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
@@ -8,16 +9,16 @@ const productionConfig = merge([
   {
     output: {
       publicPath: '/',
-      publicPath: '/test/',
+      publicPath: '/Player/',
     },
   },
 ]);
 
 module.exports = {
   context: path.resolve(__dirname, 'src'),
-  entry: './main.js',
+  entry: './index.js',
   output: {
-    filename: '[name].js',
+    filename: 'index.js',
     path: path.resolve(__dirname, 'dist'),
   },
   optimization: {
@@ -56,10 +57,13 @@ module.exports = {
         },
       },
       {
-        test: /\.(png|jpe?g|gif)$/i,
+        test: /\.(png|jpe?g|gif|mp3)$/i,
         use: [
           {
             loader: 'file-loader',
+            options: {
+              name: '[path][name].[ext]',
+            },
           },
         ],
       },

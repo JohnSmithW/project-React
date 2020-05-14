@@ -2,6 +2,7 @@ body {
   font-family: 'Open Sans', sans-serif;
   display: flex;
   justify-content: center;
+  background: #f5ff60;
 }
 
 /*Player*/
@@ -38,6 +39,8 @@ body {
 
 .player-container__item_pause {
   background-image: url('../images/pause.png');
+  width: 5%;
+  height: 5vh;
 }
 
 .player-container__item_rewind {
@@ -77,11 +80,11 @@ body {
   box-shadow: 0vmax 0.4vmax 0.4vmax rgba(0, 0, 0, 0.25);
   border-radius: 1vmax;
   display: flex;
-  justify-content: center;
   align-items: center;
 }
 
 .track-container {
+  margin-top: 1vmax;
   width: 90%;
   height: 7vh;
   border-radius: 1vmax;
@@ -151,6 +154,7 @@ body {
   display: inline-block;
   width: 100%;
   height: 1vh;
+  cursor: pointer;
 }
 
 .song-title {
@@ -176,4 +180,31 @@ body {
 }
 .play-time__end {
   font-size: 0.8vmax;
+}
+
+.volume {
+  width: 3vw;
+  height: 0.8vh;
+  border-radius: 0.5vmax;
+  background: black;
+  -webkit-appearance: none;
+}
+
+.volume::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+
+.volume:focus {
+  outline: none;
+}
+
+.volume::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 0.8vw;
+  height: 1.2vh;
+  border-radius: 0.3vmax;
+  background: #ffffff;
+  cursor: pointer;
+  margin-top: -0.2vmax;
+  box-shadow: 0.1vmax 0.1vmax 0.1vmax #000000, 0.1vmax 0.1vmax 0.1vmax #0d0d0d;
 }
