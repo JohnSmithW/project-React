@@ -1,32 +1,117 @@
-/*
-object-assign
-(c) Sindre Sorhus
-@license MIT
-*/
+/*! exports provided: clearEffect, autoEffect, batch, store, view */
 
-/** @license React v0.19.1
- * scheduler.production.min.js
- *
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
+/*! exports provided: default */
 
-/** @license React v16.13.1
- * react-dom.production.min.js
- *
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
+/*! exports provided: observe, unobserve, observable, isObservable, raw */
 
-/** @license React v16.13.1
- * react.production.min.js
- *
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
+/*! no exports provided */
+
+/*! no static exports found */
+
+/*!****************!*\
+  !*** ./app.js ***!
+  \****************/
+
+/*!******************!*\
+  !*** ./index.js ***!
+  \******************/
+
+/*!******************!*\
+  !*** ./store.js ***!
+  \******************/
+
+/*!************************!*\
+  !*** ./css/player.css ***!
+  \************************/
+
+/*!**************************!*\
+  !*** ./images/pause.png ***!
+  \**************************/
+
+/*!******************************!*\
+  !*** ./audio/21savageAT.mp3 ***!
+  \******************************/
+
+/*!******************************!*\
+  !*** ./components/Player.js ***!
+  \******************************/
+
+/*!*******************************!*\
+  !*** ./components/PlayBar.js ***!
+  \*******************************/
+
+/*!*********************************!*\
+  !*** ./components/TrackList.js ***!
+  \*********************************/
+
+/*!**********************************!*\
+  !*** ./audio/EminemGodzilla.mp3 ***!
+  \**********************************/
+
+/*!************************************!*\
+  !*** ./audio/JoynerLucasLotto.mp3 ***!
+  \************************************/
+
+/*!**************************************!*\
+  !*** ../node_modules/react/index.js ***!
+  \**************************************/
+
+/*!****************************************!*\
+  !*** ./audio/PlayboiCartiMagnolia.mp3 ***!
+  \****************************************/
+
+/*!******************************************!*\
+  !*** ../node_modules/react-dom/index.js ***!
+  \******************************************/
+
+/*!******************************************!*\
+  !*** ../node_modules/scheduler/index.js ***!
+  \******************************************/
+
+/*!********************************************!*\
+  !*** ../node_modules/scheduler/tracing.js ***!
+  \********************************************/
+
+/*!**********************************************!*\
+  !*** ../node_modules/object-assign/index.js ***!
+  \**********************************************/
+
+/*!*************************************************!*\
+  !*** ../node_modules/webpack/buildin/global.js ***!
+  \*************************************************/
+
+/*!****************************************************!*\
+  !*** ../node_modules/prop-types/checkPropTypes.js ***!
+  \****************************************************/
+
+/*!******************************************************!*\
+  !*** ../node_modules/react/cjs/react.development.js ***!
+  \******************************************************/
+
+/*!***********************************************************!*\
+  !*** ../node_modules/@nx-js/observer-util/dist/es.es5.js ***!
+  \***********************************************************/
+
+/*!**************************************************************!*\
+  !*** ../node_modules/prop-types/lib/ReactPropTypesSecret.js ***!
+  \**************************************************************/
+
+/*!**************************************************************!*\
+  !*** ../node_modules/react-dom/cjs/react-dom.development.js ***!
+  \**************************************************************/
+
+/*!**************************************************************!*\
+  !*** ../node_modules/scheduler/cjs/scheduler.development.js ***!
+  \**************************************************************/
+
+/*!********************************************************************!*\
+  !*** ../node_modules/@risingstack/react-easy-state/dist/es.es6.js ***!
+  \********************************************************************/
+
+/*!**********************************************************************!*\
+  !*** ../node_modules/scheduler/cjs/scheduler-tracing.development.js ***!
+  \**********************************************************************/
+
+/*!****************************************************************************!*\
+  !*** ../node_modules/@risingstack/react-easy-state/dist/react-platform.js ***!
+  \****************************************************************************/
