@@ -25,6 +25,11 @@ module.exports = {
     minimize: true,
     minimizer: [new TerserPlugin(), new OptimizeCssAssetsPlugin({})],
   },
+  devServer: {
+    contentBase: path.join(__dirname, 'dist'),
+    compress: true,
+    port: 9000,
+  },
   plugins: [
     new HTMLWebpackPlugin({
       template: 'index.html',

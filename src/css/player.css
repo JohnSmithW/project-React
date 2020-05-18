@@ -5,7 +5,7 @@ body {
   background: #f5ff60;
 }
 
-/*Player*/
+/* Player */
 .player-main {
   margin-top: 10vmax;
   display: flex;
@@ -14,7 +14,6 @@ body {
   height: 20vh;
   background: rgba(0, 0, 0, 0.2);
   border-radius: 1vmax;
-  display: flex;
   justify-content: center;
   align-items: center;
 }
@@ -65,22 +64,19 @@ body {
   background-image: url('../images/fast-forward.png');
 }
 
-.player-container__item_stop {
-  background-image: url('../images/stop.png');
-}
-
-/*TrackList*/
+/* TrackList */
 .trackList-main {
   margin-top: 0.5vmax;
   display: flex;
   flex-direction: column;
   width: 30vw;
   height: 50vh;
-  background: #ffffff;
-  box-shadow: 0vmax 0.4vmax 0.4vmax rgba(0, 0, 0, 0.25);
+  background: #fff;
+  box-shadow: 0 0.4vmax 0.4vmax rgba(0, 0, 0, 0.25);
   border-radius: 1vmax;
-  display: flex;
   align-items: center;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 .track-container {
@@ -91,8 +87,8 @@ body {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background: #ffffff;
-  box-shadow: 0vmax 0.4vmax 0.4vmax rgba(0, 0, 0, 0.25);
+  background: #fff;
+  box-shadow: 0 0.4vmax 0.4vmax rgba(0, 0, 0, 0.25);
   position: relative;
   user-select: none;
   cursor: pointer;
@@ -100,7 +96,6 @@ body {
 
 .track-container__image {
   position: absolute;
-  top: 3vh;
   left: 1vw;
   background-size: contain;
   background-repeat: no-repeat;
@@ -130,7 +125,6 @@ body {
 
 .track-container__menu {
   position: absolute;
-  top: 3vh;
   right: 1vw;
   background-size: contain;
   background-repeat: no-repeat;
@@ -141,7 +135,7 @@ body {
   cursor: pointer;
 }
 
-/*PlayBar*/
+/* PlayBar */
 
 .playBar-container {
   width: 60%;
@@ -178,6 +172,7 @@ body {
 .play-time__start {
   font-size: 0.8vmax;
 }
+
 .play-time__end {
   font-size: 0.8vmax;
 }
@@ -190,10 +185,6 @@ body {
   -webkit-appearance: none;
 }
 
-.volume::-webkit-slider-thumb {
-  -webkit-appearance: none;
-}
-
 .volume:focus {
   outline: none;
 }
@@ -203,8 +194,8 @@ body {
   width: 0.8vw;
   height: 1.2vh;
   border-radius: 0.3vmax;
-  background: #ffffff;
+  background: #fff;
   cursor: pointer;
   margin-top: -0.2vmax;
-  box-shadow: 0.1vmax 0.1vmax 0.1vmax #000000, 0.1vmax 0.1vmax 0.1vmax #0d0d0d;
+  box-shadow: 0.1vmax 0.1vmax 0.1vmax #000, 0.1vmax 0.1vmax 0.1vmax #0d0d0d;
 }
