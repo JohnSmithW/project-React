@@ -11,31 +11,19 @@ npm i
 **Простой сервер**
 
 ```
-npm run server
+npm run start:dev
 ```
 
-**Валидация HTML**
+**Валидация JS (eslint)**
 
 ```
-npm run validate-html
-```
-
-**Валидация JS (JSHint)**
-
-```
-npm run jshint
+npm run eslint
 ```
 
 **Валидация CSS**
 
 ```
 npm run validate-css
-```
-
-**Запуск watcher'а (валидаторы)**
-
-```
-npm run watch
 ```
 
 **Запуск DEV режима (валидаторы + лайв-сервер)**
@@ -48,4 +36,10 @@ npm run dev-mode
 
 ```
 npm run build
+```
+
+## Публикация
+
+```
+npm run deploy
 ```
