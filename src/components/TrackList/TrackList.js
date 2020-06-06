@@ -1,13 +1,16 @@
 import React from 'react';
 import { view, store } from '@risingstack/react-easy-state';
-import state from '../store';
+import state from '../../store';
+import formatTime from '../../helpers';
+import './TrackList.css';
+import './images/dots.png';
 
 class TrackList extends React.Component {
   constructor(props) {
     super(props);
     this.createAudio = this.createAudio.bind(this);
-    this.formatTime = this.formatTime.bind(this);
     this.controlAudio = this.controlAudio.bind(this);
+    this.playPause = this.playPause.bind(this);
   }
 
   createAudio(link, track) {
@@ -27,13 +30,14 @@ class TrackList extends React.Component {
     }
   }
 
-  formatTime(duration) {
-    var minutes = Math.floor(duration / 60);
-    var seconds = Math.floor(duration % 60);
-    if (seconds < 10) {
-      seconds = '0' + String(seconds);
+  playPause() {
+    if (state.isPlaying) {
+      state.trackList[state.index].audio.pause();
+      state.isPlaying = false;
+    } else {
+      state.trackList[state.index].audio.play();
+      state.isPlaying = true;
     }
-    return minutes + ':' + seconds;
   }
 
   render() {
@@ -47,6 +51,7 @@ class TrackList extends React.Component {
                 state.isPlaying = false;
                 state.index = track.index;
                 this.controlAudio();
+                this.playPause();
               }}
               className="track-container">
               <div className="track-container__image"></div>
@@ -54,7 +59,7 @@ class TrackList extends React.Component {
                 <span className="track-container__title__name">{track.name}</span>
                 <span className="track-container__title__author">{track.author}</span>
               </div>
-              <span className="track-container__duration"> {this.formatTime(track.duration)}</span>
+              <span className="track-container__duration"> {formatTime(track.duration)}</span>
               <div className="track-container__menu"></div>
             </div>
           );

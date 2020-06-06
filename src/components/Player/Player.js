@@ -1,13 +1,15 @@
 import React from 'react';
 import { view } from '@risingstack/react-easy-state';
-import state from '../store';
-import PlayBar from './PlayBar';
+import state from '../../store';
+import PlayBar from '../PlayBar/PlayBar';
+import formatTime from '../../helpers';
+import './Player.css';
+import './images/pause.png';
 
 class Player extends React.Component {
   constructor(props) {
     super(props);
 
-    this.formatTime = this.formatTime.bind(this);
     this.playPause = this.playPause.bind(this);
     this.runPlayBar = this.runPlayBar.bind(this);
     this.next = this.next.bind(this);
@@ -17,19 +19,10 @@ class Player extends React.Component {
     this.fastForward = this.fastForward.bind(this);
   }
 
-  formatTime(duration) {
-    var minutes = Math.floor(duration / 60);
-    var seconds = Math.floor(duration % 60);
-    if (seconds < 10) {
-      seconds = '0' + String(seconds);
-    }
-    return minutes + ':' + seconds;
-  }
-
   runPlayBar() {
     const interval = setInterval(() => {
       if (state.trackList[state.index].audio.currentTime <= state.trackList[state.index].duration) {
-        state.time = this.formatTime(state.trackList[state.index].audio.currentTime);
+        state.time = formatTime(state.trackList[state.index].audio.currentTime);
         state.width = state.trackList[state.index].audio.currentTime / (state.trackList[state.index].duration / 100) + '%';
       }
       if (state.trackList[state.index].audio.currentTime >= state.trackList[state.index].duration) {
@@ -132,7 +125,7 @@ class Player extends React.Component {
         <PlayBar
           songName={`${state.trackList[state.index].author}: ${state.trackList[state.index].name}`}
           songTime={state.time}
-          songDuration={this.formatTime(state.trackList[state.index].duration)}
+          songDuration={formatTime(state.trackList[state.index].duration)}
         />
         <div className="player-container">
           <div onClick={this.rewind} className="player-container__item player-container__item_rewind"></div>

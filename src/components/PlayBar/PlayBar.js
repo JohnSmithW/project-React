@@ -1,7 +1,8 @@
 import React from 'react';
 import { render } from 'react-dom';
 import { view } from '@risingstack/react-easy-state';
-import state from '../store';
+import state from '../../store';
+import './PlayBar.css';
 
 class PlayBar extends React.Component {
   constructor(props) {
@@ -12,7 +13,7 @@ class PlayBar extends React.Component {
   }
 
   componentDidMount() {
-    state.didMount = true;
+    state.playerReady = true;
   }
 
   skip(event) {
@@ -25,7 +26,7 @@ class PlayBar extends React.Component {
   }
 
   render() {
-    if (state.didMount) {
+    if (state.playerReady) {
       this.widthRef.current.style.width = state.width;
     }
     return (

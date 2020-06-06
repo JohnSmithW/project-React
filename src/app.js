@@ -1,6 +1,6 @@
 import React from 'react';
-import Player from './components/Player';
-import TrackList from './components/TrackList';
+import Player from './components/Player/Player';
+import TrackList from './components/TrackList/TrackList';
 
 const app = (
   <div>
